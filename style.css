@@ -45,3 +45,11 @@ h1 {
     color: white;
     text-align: center;
 }
+
+#grafico {
+    background-color: black;
+    width: 850px;
+    height: 450px;
+    display: inline-block;
+    margin-left: auto;
+}
