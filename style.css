@@ -26,3 +26,13 @@ footer>p {
     align-items: center;
     text-align: center;
 }
+
+h3 {
+    font-size: 15px;
+    text-align: center;
+}
+
+#entradas {
+    display: inline;
+    margin-top: 25px;
+}
