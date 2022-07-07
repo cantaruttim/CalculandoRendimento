@@ -1,8 +1,12 @@
 body {
     width: 100%;
     height: 100%;
-    background-color: rgba(89, 89, 245, 0.418);
+    background-color: white;
     padding-left: 25px;
+    background-image: url(fotos/pexels-rafael-cosquiere-2041540.jpg);
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    background-attachment: fixed;
 }
 
 #disciplinas {
@@ -35,4 +39,9 @@ h3 {
 #entradas {
     display: inline-block;
     margin: 25px;
+}
+
+h1 {
+    color: white;
+    text-align: center;
 }
