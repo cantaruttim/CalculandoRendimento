@@ -88,15 +88,19 @@
             el[i].style.backgroundColor = '#ddd'
         }
 
-        //
+        // Validando informações inseridas
+        /*
+                if ((total.value.lenght < 0 || total.value.lenght == null) || (acertos.value.lenght > total)) {
+                    alert("[ERROR] Preencha os campos corretamente")
+                } else if ()
+        */
 
-        var disciplina = document.getElementsByName("materia")
-        var total = document.getElementById("total")
-        var acertos = document.getElementById("acertos")
+        var disciplina = document.getElementsByName('materia');
+        var total = document.getElementById('#total');
+        var acertos = document.getElementById('#acertos');
 
-        if ((total.value.lenght < 0) || (acertos.value.lenght > total)) {
-            alert("Preencha os campos corretamente")
-        }
+
+
 
         /*
         var disciplina = {
