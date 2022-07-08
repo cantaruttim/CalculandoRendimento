@@ -2,7 +2,7 @@ body {
     width: 100%;
     height: 100%;
     background-color: white;
-    padding-left: 25px;
+    padding-left: 20px;
     background-image: url(fotos/pexels-rafael-cosquiere-2041540.jpg);
     background-repeat: no-repeat;
     background-position: 100% 100%;
@@ -10,7 +10,7 @@ body {
 }
 
 #disciplinas {
-    width: 100px;
+    width: 110px;
     height: 222px;
     background-color: white;
     margin-top: -330px;
@@ -22,7 +22,7 @@ body {
     width: 1250px;
     height: 450px;
     margin-top: 50px;
-    padding-left: 25px;
+    padding-left: 20px;
     align-items: center;
 }
 
@@ -38,7 +38,7 @@ h3 {
 
 #entradas {
     display: inline-block;
-    margin: 25px;
+    margin: 20px;
 }
 
 h1 {
