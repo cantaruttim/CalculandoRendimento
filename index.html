@@ -22,11 +22,13 @@
 
             <form id="fm" action="#" method="post">
 
-                <input type="number" name="total" id="total" placeholder="Total de questões?">
-                <input type="number" name="acertos" id="acertos" placeholder="Acertos ... ">
+                <input type="number" name="total" id="total" placeholder="Total de questões?"> <br>
+                <input type="number" name="acertos" id="acertos" placeholder="Acertos ... "> <br>
                 <input type="submit" name="btnsubmit" id="btnsubmit" value="Enviar">
 
             </form>
+            <hr>
+
             <section id="grafico">
 
             </section>
@@ -79,15 +81,15 @@
     </main>
 
     <script>
-
-        // estilo do formulário: 
-        var fm = document.forms[0];
-        var el = fm.elements;
-
-        for (var i = 0; i < el.length - 1; i++) {
-            el[i].style.backgroundColor = '#ddd'
-        }
-
+        /*
+                // estilo do formulário: 
+                var fm = document.forms[0];
+                var el = fm.elements;
+        
+                for (var i = 0; i < el.length - 1; i++) {
+                    el[i].style.backgroundColor = '#ddd'
+                }
+        */
         // Validando informações inseridas
         /*
                 if ((total.value.lenght < 0 || total.value.lenght == null) || (acertos.value.lenght > total)) {
@@ -96,11 +98,7 @@
         */
 
         var disciplina = document.getElementsByName('materia');
-        var total = document.getElementById('#total');
-        var acertos = document.getElementById('#acertos');
-
-
-
+        var materia = ' '
 
         /*
         var disciplina = {
