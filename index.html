@@ -20,13 +20,13 @@
         </div>
         <div id="resultados">
 
-            <section id="entradas">
+            <form id="fm" action="#" method="post">
 
-                <input type="number" name="total" id="total" placeholder="Quantas questões totais?">
+                <input type="number" name="total" id="total" placeholder="Total de questões?">
                 <input type="number" name="acertos" id="acertos" placeholder="Acertos ... ">
+                <input type="submit" name="btnsubmit" id="btnsubmit" value="Enviar">
 
-            </section>
-
+            </form>
             <section id="grafico">
 
             </section>
@@ -80,9 +80,23 @@
 
     <script>
 
+        // estilo do formulário: 
+        var fm = document.forms[0];
+        var el = fm.elements;
+
+        for (var i = 0; i < el.length - 1; i++) {
+            el[i].style.backgroundColor = '#ddd'
+        }
+
+        //
+
         var disciplina = document.getElementsByName("materia")
         var total = document.getElementById("total")
         var acertos = document.getElementById("acertos")
+
+        if ((total.value.lenght < 0) || (acertos.value.lenght > total)) {
+            alert("Preencha os campos corretamente")
+        }
 
         /*
         var disciplina = {
