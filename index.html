@@ -84,8 +84,8 @@
 
         // variáveis
 
-        var total = document.getElementById('total');
-        var acertos = document.getElementById('acertos');
+        //  var total = document.getElementById('total');
+        // var acertos = document.getElementById('acertos');
 
 
         // estilo do formulário: 
@@ -96,39 +96,44 @@
             el[i].style.backgroundColor = '#ddd'
         }
 
+        // mostrando o valor obtido na tela
+        const enviar = document.querySelector('#btnsubmit')
 
-        // Validando informações inseridas
-        // pegando as informações do input
+        enviar.addEventListener("click", function (e) {
+            e.preventDefault();
 
-        if ((total.value.lenght < 0 || total.value.lenght == null) || (acertos.value.lenght > total)) {
-            alert("[ERROR] Preencha os campos corretamente")
-        } else {
-            var disciplina = document.getElementsByName('materia');
-            var Total = Number(total.value);
-            var Acertos = Number(acertos.value);
-            var materia = ' '
-        }
+            const total = document.querySelector('#total');
+            const total_valor = total.value;
 
+            const acertos = document.querySelector('#acertos');
+            const total_acertos = acertos.value;
 
+            const res = document.querySelector('#grafico');
+            const saida = document.createElement('p')
+
+            res.appendChild(saida);
+            saida.innerHTML = `O total de questões eram ${total_valor} questões e obteve ${total_acertos} acertos`;
+
+        });
 
 
         /*
         var disciplina = {
-            x: [],
-            y: [],
-            type: 'bar'
+           x: [],
+           y: [],
+           type: 'bar'
         };
-
+        
         var porcentagem = {
-            x: [],
-            y: [],
-            type: 'scatter'
+           x: [],
+           y: [],
+           type: 'scatter'
         };
-
+        
         var data = [disciplina, porcentagem];
-
+        
         Plotly.newPlot('grafico', data);
-*/
+        */
 
     </script>
 </body>
