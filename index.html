@@ -134,15 +134,26 @@
             var x = [total_valor]
             var y = [total_acertos]
 
-            var disciplina = {
-                x: [total_valor],
-                y: [total_acertos],
+            var trace1 = {
+                x: ['questões'],
+                y: [total_valor],
+                name: 'Total Questões',
                 type: 'bar'
             };
 
-            var data = [disciplina];
+            var trace2 = {
+                x: ['acertos'],
+                y: [total_acertos],
+                name: 'Total Acertos',
+                type: 'bar'
+            };
 
-            Plotly.newPlot('grafico', data);
+            var data = [trace1, trace2];
+
+            var layout = { barmode: 'stack' };
+
+            Plotly.newPlot('grafico', data, layout);
+
 
         })
 
