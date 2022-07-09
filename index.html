@@ -14,8 +14,8 @@
     <main>
         <h1>Calculando o Rendimento Acertos</h1> <br>
         <div>
-            <button value="resultado" name="resultados">Resultado</button>
-            <button value="porcentagem" name="porcentagem">porcentagem</button>
+            <button value="resultado" name="resultados" id="resultado">Resultado</button>
+            <button value="porcentagem" name="porcentagem" id="porcentagem">porcentagem</button>
 
         </div>
         <div id="resultados">
@@ -115,6 +115,35 @@
             saida.innerHTML = `O total de questões eram ${total_valor} questões e obteve ${total_acertos} acertos`;
 
         });
+
+        const resultado = document.querySelector('#resultado')
+
+        resultado.addEventListener("click", function (r) {
+            r.preventDefault();
+
+            const total = document.querySelector('#total');
+            const total_valor = total.value;
+
+            const acertos = document.querySelector('#acertos');
+            const total_acertos = acertos.value;
+
+            // indices das matérias vão de 0 a 10:
+
+            var materia = document.getElementsByName('materia')
+
+            if (materia[0].checked) {
+
+                var disciplina = {
+                    x: total_valor,
+                    y: total_acertos,
+                    type: 'bar'
+                };
+
+                var data = [disciplina];
+
+                Plotly.newPlot('grafico', data);
+            }
+        })
 
 
         /*
