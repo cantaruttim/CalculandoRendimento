@@ -81,24 +81,36 @@
     </main>
 
     <script>
-        /*
-                // estilo do formulário: 
-                var fm = document.forms[0];
-                var el = fm.elements;
-        
-                for (var i = 0; i < el.length - 1; i++) {
-                    el[i].style.backgroundColor = '#ddd'
-                }
-        */
-        // Validando informações inseridas
-        /*
-                if ((total.value.lenght < 0 || total.value.lenght == null) || (acertos.value.lenght > total)) {
-                    alert("[ERROR] Preencha os campos corretamente")
-                } else if ()
-        */
 
-        var disciplina = document.getElementsByName('materia');
-        var materia = ' '
+        // variáveis
+
+        var total = document.getElementById('total');
+        var acertos = document.getElementById('acertos');
+
+
+        // estilo do formulário: 
+        var fm = document.forms[0];
+        var el = fm.elements;
+
+        for (var i = 0; i < el.length - 1; i++) {
+            el[i].style.backgroundColor = '#ddd'
+        }
+
+
+        // Validando informações inseridas
+        // pegando as informações do input
+
+        if ((total.value.lenght < 0 || total.value.lenght == null) || (acertos.value.lenght > total)) {
+            alert("[ERROR] Preencha os campos corretamente")
+        } else {
+            var disciplina = document.getElementsByName('materia');
+            var Total = Number(total.value);
+            var Acertos = Number(acertos.value);
+            var materia = ' '
+        }
+
+
+
 
         /*
         var disciplina = {
