@@ -112,7 +112,7 @@
             const saida = document.createElement('p')
 
             res.appendChild(saida);
-            saida.innerHTML = `O total de questões eram ${total_valor} questões e obteve ${total_acertos} acertos`;
+            //saida.innerHTML = `O total de questões eram ${total_valor} questões e obteve ${total_acertos} acertos`;
 
         });
 
@@ -131,18 +131,16 @@
 
             var materia = document.getElementsByName('materia')
 
-            if (materia[0].checked) {
+            var disciplina = {
+                x: total_valor,
+                y: total_acertos,
+                type: 'bar'
+            };
 
-                var disciplina = {
-                    x: total_valor,
-                    y: total_acertos,
-                    type: 'bar'
-                };
+            var data = [disciplina];
 
-                var data = [disciplina];
+            Plotly.newPlot('grafico', data);
 
-                Plotly.newPlot('grafico', data);
-            }
         })
 
 
