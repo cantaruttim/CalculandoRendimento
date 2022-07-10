@@ -106,6 +106,12 @@
             const acertos = document.querySelector('#acertos');
             const total_acertos = acertos.value;
 
+            const txt = document.querySelector('#resultados')
+            const valortxt = document.createElement('p')
+
+            txt.appendChild(valortxt);
+            valortxt.innerHTML = `Você obteve ${total_acertos} de um total de ${total_valor} questões`
+
             // indices das matérias vão de 0 a 10:
 
             var materia = document.getElementsByName('materia')
