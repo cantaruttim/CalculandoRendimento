@@ -10,8 +10,8 @@
     <title>Calculando Rendimento</title>
 </head>
 
-<body>
-    <main>
+<body id="background">
+    <main id="main_content">
         <h1>Calculando o Rendimento Acertos</h1> <br>
         <div>
             <button value="resultado" name="resultados" id="resultado">Resultado</button>
@@ -26,45 +26,47 @@
             </form>
             <hr>
 
+            <section id="information">
+
+            </section>
+
             <section id="grafico">
 
             </section>
 
             <section id="disciplinas">
 
-                <h3> <i> Selecione a Matéria </i></h3>
-
                 <!-- Exatas -->
                 <label for="mat">Matemática</label>
-                <input type="radio" name="materia" id="mat" checked> <br>
+                <input type="radio" name="materia" id="mat" checked>
                 <label for="qui">Química</label>
-                <input type="radio" name="materia" id="qui"> <br>
+                <input type="radio" name="materia" id="qui">
                 <label for="fis">Física</label>
-                <input type="radio" name="materia" id="fis"> <br>
+                <input type="radio" name="materia" id="fis">
 
                 <!-- Biológicas -->
                 <label for="bio">Biologia</label>
-                <input type="radio" name="materia" id="bio"> <br>
+                <input type="radio" name="materia" id="bio">
 
                 <!-- Humanas -->
 
                 <label for="soc">Sociologia</label>
-                <input type="radio" name="materia" id="soc"> <br>
+                <input type="radio" name="materia" id="soc">
                 <label for="his">História</label>
-                <input type="radio" name="materia" id="his"> <br>
+                <input type="radio" name="materia" id="his">
                 <label for="geo">Geografia</label>
-                <input type="radio" name="materia" id="geo"> <br>
+                <input type="radio" name="materia" id="geo">
                 <label for="filo">Filosofia</label>
-                <input type="radio" name="materia" id="filo"> <br>
+                <input type="radio" name="materia" id="filo">
 
                 <!-- Idiomas -->
 
                 <label for="port">Português</label>
-                <input type="radio" name="materia" id="port"> <br>
+                <input type="radio" name="materia" id="port">
                 <label for="ing">Inglês</label>
-                <input type="radio" name="materia" id="ing"> <br>
+                <input type="radio" name="materia" id="ing">
                 <label for="espa">Espanhol</label>
-                <input type="radio" name="materia" id="espa"> <br>
+                <input type="radio" name="materia" id="espa">
 
             </section>
         </div>
@@ -108,7 +110,7 @@
 
             // preciso arrumar o alinhamento do texto inserido no HTML
 
-            const txt = document.querySelector('#resultados')
+            const txt = document.querySelector('#information')
             const valortxt = document.createElement('p')
 
             txt.appendChild(valortxt);

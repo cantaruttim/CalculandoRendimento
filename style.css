@@ -1,19 +1,37 @@
-body {
+#background {
+    position: relative;
+}
+
+#background:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
     width: 100%;
     height: 100%;
-    background-color: white;
-    padding-left: 20px;
-    background-image: url(fotos/pexels-rafael-cosquiere-2041540.jpg);
+    opacity: 0.9;
+    background-image: url('fotos/pexels-rafael-cosquiere-2041540.jpg');
     background-repeat: no-repeat;
-    background-position: 100% 100%;
-    background-attachment: fixed;
+    background-position: 50% 0;
+    background-size: cover;
+}
+
+#main_content {
+    position: relative;
+}
+
+#information {
+    width: 180px;
+    height: 200px;
+    background-color: white;
+    margin-top: 2px;
 }
 
 #disciplinas {
-    width: 110px;
-    height: 222px;
-    background-color: white;
-    margin-top: -330px;
+    margin-left: 120px;
+    display: inline;
+    padding-left: 50px;
 }
 
 #resultados {
@@ -22,8 +40,8 @@ body {
     width: 1250px;
     height: 450px;
     margin-top: 50px;
+    margin-left: 50px;
     padding-left: 20px;
-    align-items: center;
 }
 
 footer>p {
@@ -48,10 +66,11 @@ h1 {
 
 #grafico {
     background-color: white;
-    width: 950px;
+    width: 1000px;
     height: 350px;
     display: inline-block;
-    margin-left: 300px;
+    margin-left: 230px;
+    margin-top: -220px;
 }
 
 #fm {
