@@ -15,8 +15,6 @@
         <h1>Calculando o Rendimento Acertos</h1> <br>
         <div>
             <button value="resultado" name="resultados" id="resultado">Resultado</button>
-            <button value="porcentagem" name="porcentagem" id="porcentagem">porcentagem</button>
-
         </div>
         <div id="resultados">
 
@@ -159,27 +157,6 @@
             var layout = { barmode: 'stack' };
 
             Plotly.newPlot('grafico', data, layout);
-
-
-        })
-
-        const porc = document.querySelector('#resultado')
-
-        porc.addEventListener("click", function (p) {
-            p.preventDefault();
-
-            const total = document.querySelector('#total');
-            const total_valor = total.value;
-
-            const acertos = document.querySelector('#acertos');
-            const total_acertos = acertos.value;
-
-
-            var x = total_valor;
-            var y = total_acertos;
-            var pc = ((total_acertos * 100) / total_valor)
-
-            document.alert(`Sua porcentagem de acerto foi de ${pc}`)
 
         })
 
