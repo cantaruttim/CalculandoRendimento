@@ -68,10 +68,10 @@ h1 {
 #grafico {
     background-color: white;
     width: 1000px;
-    height: 350px;
+    height: 340px;
     display: inline-block;
     margin-left: 230px;
-    margin-top: -220px;
+    margin-top: -200px;
 }
 
 #fm {
