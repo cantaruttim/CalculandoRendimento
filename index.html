@@ -120,13 +120,11 @@
             } else if ((total_valor < 0) || (acertos < 0)) {
                 alert('Desculpe, a quantidade de questões não pode ser negativa')
             } else {
-                /*
-                function porcent(a, q) {
-                    var porcento = ((acertos * 100) / total_valor)
-                };
-                var p = porcent(acertos, total_valor)
-                */
 
+                function porcent(acertos, total_valor) {
+                    var porcento = ((acertos * 100) / total_valor)
+                    return porcento
+                };
                 //selecionando a materia
 
                 var materia = document.getElementsByName('materia')
@@ -180,7 +178,7 @@
                 txt.appendChild(valortxt);
 
                 // preciso resolver o problema de NaN da porcentagem
-                valortxt.innerHTML = `Você selecionou ${nomeD} e obteve ${total_acertos} de um total de ${total_valor} questões. Com um total de ${p} % de aproveitamento`
+                valortxt.innerHTML = `Você selecionou ${nomeD} e obteve ${total_acertos} de um total de ${total_valor} questões. Com um total de ${porcent(acertos, total_valor)} % de aproveitamento`
             }
         })
 
