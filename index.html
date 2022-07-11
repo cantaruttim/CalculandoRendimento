@@ -117,10 +117,16 @@
 
             if (total_valor === "" || acertos === "") {
                 alert('[ERROR] Preencha os campos corretamente')
+            } else if (total_valor < acertos) {
+                alert('[ERROR] Impossível ter menos questões do que acertos')
+            } else if (total_valor < 0) {
+                alert('Desculpe, a quantidade de questões não pode ser negativa')
             } else {
+
+                //selecionando a materia
+
                 var materia = document.getElementsByName('materia')
                 var nomeD = ' '
-                //selecionando a materia
 
                 if (materia[0].checked) {
                     nomeD = 'Matemática'
@@ -143,32 +149,34 @@
                 } else if (materia[9].checked) {
                     nomeD = 'Espanhol'
                 }
+                // Plotando o gráfico
+
+                var x = [total_valor]
+                var y = [total_acertos]
+
+                var trace1 = {
+                    x: ['questões'],
+                    y: [total_valor],
+                    name: 'Total Questões',
+                    type: 'bar'
+                };
+
+                var trace2 = {
+                    x: ['acertos'],
+                    y: [total_acertos],
+                    name: 'Total Acertos',
+                    type: 'bar'
+                };
+
+                var data = [trace1, trace2];
+
+                var layout = { barmode: 'stack' };
+
+                Plotly.newPlot('grafico', data, layout);
                 txt.appendChild(valortxt);
-                valortxt.innerHTML = `Você selecionou a ${nomeD} e obteve ${total_acertos} de um total de ${total_valor} questões`
+                valortxt.innerHTML = `Você selecionou ${nomeD} e obteve ${total_acertos} de um total de ${total_valor} questões`
             }
 
-            var x = [total_valor]
-            var y = [total_acertos]
-
-            var trace1 = {
-                x: ['questões'],
-                y: [total_valor],
-                name: 'Total Questões',
-                type: 'bar'
-            };
-
-            var trace2 = {
-                x: ['acertos'],
-                y: [total_acertos],
-                name: 'Total Acertos',
-                type: 'bar'
-            };
-
-            var data = [trace1, trace2];
-
-            var layout = { barmode: 'stack' };
-
-            Plotly.newPlot('grafico', data, layout);
 
         })
 
