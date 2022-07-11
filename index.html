@@ -113,8 +113,10 @@
             const txt = document.querySelector('#information')
             const valortxt = document.createElement('p')
 
+            //validando os dados do input
+
             if (total_valor === "" || acertos === "") {
-                document.alert('[ERROR] Preencha os campos corretamente')
+                alert('[ERROR] Preencha os campos corretamente')
             } else {
                 txt.appendChild(valortxt);
                 valortxt.innerHTML = `Você obteve ${total_acertos} de um total de ${total_valor} questões`
