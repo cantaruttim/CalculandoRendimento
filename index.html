@@ -124,6 +124,8 @@
                 alert('ops ... vocÊ não selecionou uma disciplina')
             } else if ((total_valor < 0) || (acertos < 0)) { // se o valor de questões for menor do que os de acertos
                 alert('Desculpe, a quantidade de questões/acertos não pode ser negativa')
+            } else if (total_acertos > total_valor) {
+                alert('Acertos não pode ser superior à quantidade de questões')
             } else { // o restante do código só será realizado apenas se todas as outras condições forem verdadeiras
 
                 // function returning NaN
