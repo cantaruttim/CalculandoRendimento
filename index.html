@@ -90,8 +90,8 @@
 
 
         // estilo do formulário: 
-        var fm = document.forms[0];
-        var el = fm.elements;
+        var fm = document.forms[0]; // aponto para o formulario
+        var el = fm.elements; // seleciono os elementos do formulario
 
         for (var i = 0; i < el.length; i++) {
             el[i].style.backgroundColor = '#ddd'
@@ -120,6 +120,10 @@
             } else if ((total_valor < 0) || (acertos < 0)) {
                 alert('Desculpe, a quantidade de questões não pode ser negativa')
             } else {
+
+                for (var i = 0; i < fm.length - 1; i++) {
+
+                }
 
                 /*
                 function porcent(a, q) {
