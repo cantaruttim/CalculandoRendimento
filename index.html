@@ -127,11 +127,11 @@
             } else { // o restante do código só será realizado apenas se todas as outras condições forem verdadeiras
 
                 // function returning NaN
-                function porcentagem(acertos, total_valor) {
-                    if (isNaN(acertos) || isNaN(total_valor)) {
+                function porcentagem(total_acertos, total_valor) {
+                    if (isNaN(total_acertos) || isNaN(total_valor)) {
                         return 'Not a Number!';
                     } else {
-                        var p = ((acertos * 100) / total_acertos)
+                        var p = ((total_acertos * 100) / total_acertos)
                         Number(p)
                     }
                     return p;
