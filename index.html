@@ -117,11 +117,12 @@
 
             if (total_valor === "" || acertos === "") {
                 alert('[ERROR] Preencha os campos corretamente')
-            } else if (total_valor < acertos) {
-                alert('[ERROR] Impossível ter menos questões do que acertos')
-            } else if (total_valor < 0 || acertos < 0) {
+            } else if ((total_valor < 0) || (acertos < 0)) {
                 alert('Desculpe, a quantidade de questões não pode ser negativa')
             } else {
+
+                var porcentagem = ((acertos * 100) / total_valor)
+                var porcent = Number(porcentagem)
 
                 //selecionando a materia
 
@@ -174,7 +175,7 @@
 
                 Plotly.newPlot('grafico', data, layout);
                 txt.appendChild(valortxt);
-                valortxt.innerHTML = `Você selecionou ${nomeD} e obteve ${total_acertos} de um total de ${total_valor} questões`
+                valortxt.innerHTML = `Você selecionou ${nomeD} e obteve ${total_acertos} de um total de ${total_valor} questões. Com um total de ${porcent}`
             }
         })
 
