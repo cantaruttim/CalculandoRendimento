@@ -41,7 +41,7 @@
 
                 <!-- Exatas -->
                 <label for="mat">Matemática</label>
-                <input type="radio" name="materia" id="mat" checked>
+                <input type="radio" name="materia" id="mat">
                 <label for="qui">Química</label>
                 <input type="radio" name="materia" id="qui">
                 <label for="fis">Física</label>
@@ -119,7 +119,7 @@
                 alert('[ERROR] Preencha os campos corretamente')
             } else if (total_valor < acertos) {
                 alert('[ERROR] Impossível ter menos questões do que acertos')
-            } else if (total_valor < 0) {
+            } else if (total_valor < 0 || acertos < 0) {
                 alert('Desculpe, a quantidade de questões não pode ser negativa')
             } else {
 
@@ -176,8 +176,6 @@
                 txt.appendChild(valortxt);
                 valortxt.innerHTML = `Você selecionou ${nomeD} e obteve ${total_acertos} de um total de ${total_valor} questões`
             }
-
-
         })
 
     </script>
