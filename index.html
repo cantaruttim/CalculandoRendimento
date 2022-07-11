@@ -118,37 +118,33 @@
             if (total_valor === "" || acertos === "") {
                 alert('[ERROR] Preencha os campos corretamente')
             } else {
+                var materia = document.getElementsByName('materia')
+                var nomeD = ' '
+                //selecionando a materia
+
+                if (materia[0].checked) {
+                    nomeD = 'Matemática'
+                } else if (materia[1].checked) {
+                    nomeD = 'Química'
+                } else if (materia[2].checked) {
+                    nomeD = 'Física'
+                } else if (materia[3].checked) {
+                    nomeD = 'Biologia'
+                } else if (materia[4].checked) {
+                    nomeD = 'Sociologia'
+                } else if (materia[5].checked) {
+                    nomeD = 'História'
+                } else if (materia[6].checked) {
+                    nomeD = 'Geografia'
+                } else if (materia[7].checked) {
+                    nomeD = 'Filosofia'
+                } else if (materia[8].checked) {
+                    nomeD = 'Inglês'
+                } else if (materia[9].checked) {
+                    nomeD = 'Espanhol'
+                }
                 txt.appendChild(valortxt);
-                valortxt.innerHTML = `Você obteve ${total_acertos} de um total de ${total_valor} questões`
-            }
-
-            // indices das matérias vão de 0 a 10:
-
-            var materia = document.getElementsByName('materia')
-            var nomeD = ' '
-
-            //selecionando a materia
-
-            if (materia[0].checked) {
-                nomeD = 'Matemática'
-            } else if (materia[1].checked) {
-                nomeD = 'Química'
-            } else if (materia[2].checked) {
-                nomeD = 'Física'
-            } else if (materia[3].checked) {
-                nomeD = 'Biologia'
-            } else if (materia[4].checked) {
-                nomeD = 'Sociologia'
-            } else if (materia[5].checked) {
-                nomeD = 'História'
-            } else if (materia[6].checked) {
-                nomeD = 'Geografia'
-            } else if (materia[7].checked) {
-                nomeD = 'Filosofia'
-            } else if (materia[8].checked) {
-                nomeD = 'Inglês'
-            } else if (materia[9].checked) {
-                nomeD = 'Espanhol'
+                valortxt.innerHTML = `Você selecionou a ${nomeD} e obteve ${total_acertos} de um total de ${total_valor} questões`
             }
 
             var x = [total_valor]
