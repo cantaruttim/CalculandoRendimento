@@ -113,10 +113,15 @@
             const txt = document.querySelector('#information')
             const valortxt = document.createElement('p')
 
+            const disciplina = document.getElementsByName('materia')
+
+
             //validando os dados do input
 
             if (total_valor === "" || acertos === "") {
                 alert('[ERROR] Preencha os campos corretamente')
+            } else if (disciplina != disciplina.checked) {
+                alert('[ERROR] por favor selecione uma matéria')
             } else if ((total_valor < 0) || (acertos < 0)) {
                 alert('Desculpe, a quantidade de questões não pode ser negativa')
             } else {
