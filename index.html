@@ -127,11 +127,16 @@
             } else { // o restante do código só será realizado apenas se todas as outras condições forem verdadeiras
 
                 // function returning NaN
+                function porcentagem(acertos, total_valor) {
+                    if (isNaN(acertos) || isNaN(total_valor)) {
+                        return 'Not a Number!';
+                    } else {
+                        var p = ((acertos * 1000) / total_acertos)
+                        Number(p)
+                    }
+                    return p;
+                }
 
-                function porcent(acertos, total_valor) {
-                    var porcento = ((acertos * 100) / total_valor)
-                    return porcento
-                };
                 //selecionando a materia
 
                 var materia = document.getElementsByName('materia')
@@ -185,7 +190,7 @@
                 txt.appendChild(valortxt);
 
                 // preciso resolver o problema de NaN da porcentagem
-                valortxt.innerHTML = `Você selecionou ${nomeD} e obteve ${total_acertos} de um total de ${total_valor} questões. Com um total de ${porcent(acertos, total_valor)} % de aproveitamento`
+                valortxt.innerHTML = `Você selecionou ${nomeD} e obteve ${total_acertos} de um total de ${total_valor} questões. Com um total de ${porcentagem(p)} % de aproveitamento`
             }
         })
 
