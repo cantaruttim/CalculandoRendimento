@@ -27,6 +27,9 @@
             <hr>
 
             <section id="information">
+                <div>
+
+                </div>
 
             </section>
 
@@ -73,7 +76,6 @@
 
         <footer>
             <p> <i> <strong> Projeto </strong> criado por <strong> Matheus Cantarutti </strong> </i></p>
-            <audio src="audio/audioTeste.mp3" controls></audio>
         </footer>
 
 
@@ -107,14 +109,6 @@
 
             const acertos = document.querySelector('#acertos');
             const total_acertos = acertos.value;
-
-            // preciso arrumar o alinhamento do texto inserido no HTML
-
-            const txt = document.querySelector('#information')
-            const valortxt = document.createElement('p')
-
-            txt.appendChild(valortxt);
-            valortxt.innerHTML = `Você obteve ${total_acertos} de um total de ${total_valor} questões`
 
             // indices das matérias vão de 0 a 10:
 
@@ -167,6 +161,18 @@
             var layout = { barmode: 'stack' };
 
             Plotly.newPlot('grafico', data, layout);
+
+            // confirmando se os valores do campo não estão vazios
+
+            const txt = document.querySelector('#information')
+            const valortxt = document.createElement('p')
+
+            if (total_valor && acertos === ' ') {
+                document.alert('[ERROR]Preencha os campos corretamente')
+            } else {
+                txt.appendChild(valortxt);
+                valortxt.innerHTML = `Você obteve ${total_acertos} de um total de ${total_valor} questões`
+            }
 
         })
 
