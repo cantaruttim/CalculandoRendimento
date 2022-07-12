@@ -39,37 +39,27 @@
 
             <section id="disciplinas">
 
+                <label for="bt_todos">TODOS</label>
+                <input type="radio" name="bt" id="bt_todos">
+
                 <!-- Exatas -->
-                <label for="mat">Matemática</label>
-                <input type="radio" name="materia" id="mat">
-                <label for="qui">Química</label>
-                <input type="radio" name="materia" id="qui">
-                <label for="fis">Física</label>
-                <input type="radio" name="materia" id="fis">
+
+                <label for="bt_exatas">Exatas</label>
+                <input type="radio" name="bt" id="bt_exatas">
 
                 <!-- Biológicas -->
-                <label for="bio">Biologia</label>
-                <input type="radio" name="materia" id="bio">
+                <label for="bt_biologicas">Biológicas</label>
+                <input type="radio" name="bt" id="bt_biologicas">
 
                 <!-- Humanas -->
 
-                <label for="soc">Sociologia</label>
-                <input type="radio" name="materia" id="soc">
-                <label for="his">História</label>
-                <input type="radio" name="materia" id="his">
-                <label for="geo">Geografia</label>
-                <input type="radio" name="materia" id="geo">
-                <label for="filo">Filosofia</label>
-                <input type="radio" name="materia" id="filo">
+                <label for="bt_humanas">Humanas</label>
+                <input type="radio" name="bt" id="bt_humanas">
 
                 <!-- Idiomas -->
 
-                <label for="port">Português</label>
-                <input type="radio" name="materia" id="port">
-                <label for="ing">Inglês</label>
-                <input type="radio" name="materia" id="ing">
-                <label for="espa">Espanhol</label>
-                <input type="radio" name="materia" id="espa">
+                <label for="bt_idiomas">Idiomas</label>
+                <input type="radio" name="bt" id="bt_idiomas">
 
             </section>
         </div>
@@ -90,7 +80,7 @@
         for (var i = 0; i < el.length; i++) {
             el[i].style.backgroundColor = '#ddd'
         }
-        // function returning NaN
+        // function a porcentagem de aproveitamento do acerto de questões
         function porcentagem(ac, tv) {
             // console.log(ac, tv)
             if (isNaN(parseInt(ac)) || isNaN(parseInt(tv))) {
@@ -129,33 +119,6 @@
             } else if ((total_valor < 0) || (total_acertos < 0)) { // se o valor de questões for menor do que os de acertos
                 alert('Desculpe, a quantidade de questões/acertos não pode ser negativa')
             } else { // o restante do código só será realizado apenas se todas as outras condições forem verdadeiras
-
-                //selecionando a materia
-
-                var materia = document.getElementsByName('materia')
-                var nomeD = ' '
-
-                if (materia[0].checked) {
-                    nomeD = 'Matemática'
-                } else if (materia[1].checked) {
-                    nomeD = 'Química'
-                } else if (materia[2].checked) {
-                    nomeD = 'Física'
-                } else if (materia[3].checked) {
-                    nomeD = 'Biologia'
-                } else if (materia[4].checked) {
-                    nomeD = 'Sociologia'
-                } else if (materia[5].checked) {
-                    nomeD = 'História'
-                } else if (materia[6].checked) {
-                    nomeD = 'Geografia'
-                } else if (materia[7].checked) {
-                    nomeD = 'Filosofia'
-                } else if (materia[8].checked) {
-                    nomeD = 'Inglês'
-                } else if (materia[9].checked) {
-                    nomeD = 'Espanhol'
-                }
 
                 // Plotando o gráfico
 
