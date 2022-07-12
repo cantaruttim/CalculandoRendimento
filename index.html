@@ -130,18 +130,6 @@
                 alert('Desculpe, a quantidade de questões/acertos não pode ser negativa')
             } else { // o restante do código só será realizado apenas se todas as outras condições forem verdadeiras
 
-                /*               // function returning NaN
-                               function porcentagem(acertos, total_valor) {
-                                   if (isNaN(parseInt(acertos)) || isNaN(parseInt(total_valor))) {
-                                       return 'Not a Number!';
-                                   } else {
-                                       var p = ((acertos * 100) / total_valor)
-                                       Number(p)
-                                   }
-                                   return p;
-                               }
-                   */
-
                 //selecionando a materia
 
                 var materia = document.getElementsByName('materia')
@@ -168,6 +156,7 @@
                 } else if (materia[9].checked) {
                     nomeD = 'Espanhol'
                 }
+
                 // Plotando o gráfico
 
                 var x = [total_valor]
