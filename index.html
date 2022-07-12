@@ -121,8 +121,6 @@
 
             if (total_valor === "" || total_acertos === "") { // se os campos estiverem vazios
                 alert('[ERROR] Preencha os campos corretamente')
-            } else if (disciplina.checked = false) { // se o radio não estiver marcado, dará erro
-                alert('ops ... vocÊ não selecionou uma disciplina')
             } else if ((total_valor < 0) || (total_acertos < 0)) { // se o valor de questões for menor do que os de acertos
                 alert('Desculpe, a quantidade de questões/acertos não pode ser negativa')
             } else { // o restante do código só será realizado apenas se todas as outras condições forem verdadeiras

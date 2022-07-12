@@ -85,3 +85,28 @@ h1 {
 #btn {
     padding-left: 20px;
 }
+
+#galeria {
+    width: 780px;
+    height: auto;
+    margin: 100px auto;
+}
+
+#galeria img {
+    float: left;
+    width: 200px;
+    padding: 5px;
+    transition: all .4s;
+}
+
+section label {
+    width: 175px;
+    padding: 10px 10px;
+    display: block;
+    float: left;
+    background-color: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    cursor: pointer;
+}
