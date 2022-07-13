@@ -15,7 +15,7 @@
     top: 0px;
     width: 100%;
     height: 100%;
-    opacity: 0.9;
+    opacity: 0.7;
     background-image: url('fotos/pexels-rafael-cosquiere-2041540.jpg');
     background-repeat: no-repeat;
     background-position: 50% 0;
@@ -43,7 +43,7 @@
     display: inline-block;
     background-color: white;
     width: 1250px;
-    height: 480px;
+    height: 500px;
     margin-top: 50px;
     margin-left: 50px;
     padding-left: 20px;
@@ -66,12 +66,12 @@ h1 {
 }
 
 #grafico {
-    background-color: white;
+    background-color: black;
     width: 1000px;
     height: 340px;
     display: inline-block;
     margin-left: 230px;
-    margin-top: -200px;
+    margin-top: -250px;
 }
 
 #fm {
@@ -82,9 +82,9 @@ h1 {
     padding-left: 20px;
 }
 
-/*
+
 section {
-    width: 780px;
+    width: 800px;
     height: auto;
     margin: 100px auto;
 }
@@ -137,5 +137,3 @@ input {
     opacity: .4;
     transform: scale(0.5);
 }
-
-*/
