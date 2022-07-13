@@ -30,7 +30,10 @@
     width: 180px;
     height: 200px;
     background-color: white;
-    margin-top: 2px;
+    margin-top: 5px;
+    padding: 5px;
+    color: black;
+    float: left;
 }
 
 #disciplinas {
@@ -66,7 +69,7 @@ h1 {
 }
 
 #grafico {
-    background-color: black;
+    background-color: white;
     width: 1000px;
     height: 340px;
     display: inline-block;
@@ -87,6 +90,7 @@ section {
     width: 800px;
     height: auto;
     margin: 100px auto;
+    background-color: #ddd;
 }
 
 #galeria img {
@@ -114,6 +118,10 @@ input:checked+label {
 
 input {
     display: none;
+}
+
+#fm>input {
+    display: block;
 }
 
 #bt_exatas:checked~#galeria .exatas {

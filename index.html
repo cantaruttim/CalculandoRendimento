@@ -113,8 +113,6 @@
             const txt = document.querySelector('#information')
             const valortxt = document.createElement('p')
 
-            const disciplina = document.getElementsByName('bt')
-
 
             //validando os dados do input
 
@@ -152,7 +150,7 @@
 
                 let perc = porcentagem(parseInt(total_acertos), total_valor)
                 // preciso resolver o problema de NaN da porcentagem
-                valortxt.innerHTML = `Você selecionou ${nomeD} e obteve ${total_acertos} de um total de ${total_valor} questões. Com um total de ${perc} % de aproveitamento`
+                valortxt.innerHTML = `Você obteve ${total_acertos} acertos de um total de ${total_valor} questões. Sua rendimento foi de ${perc} % de aproveitamento`
             }
         })
 
